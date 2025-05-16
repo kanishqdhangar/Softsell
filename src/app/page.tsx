@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -15,6 +15,37 @@ export default function Home() {
           Get a Quote
         </button>
       </section>
+      {/* How It Works Section */}
+      <section className="bg-white text-gray-800 py-20 w-full">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            How It Works
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Step 1 */}
+            <div className="text-center px-4">
+              <div className="text-5xl mb-4">📤</div>
+              <h3 className="text-xl font-semibold mb-2">Upload License</h3>
+              <p className="text-gray-600">Submit your unused software license in just a few clicks.</p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center px-4">
+              <div className="text-5xl mb-4">📊</div>
+              <h3 className="text-xl font-semibold mb-2">Get Valuation</h3>
+              <p className="text-gray-600">We instantly evaluate your license's resale value.</p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center px-4">
+              <div className="text-5xl mb-4">💸</div>
+              <h3 className="text-xl font-semibold mb-2">Get Paid</h3>
+              <p className="text-gray-600">Receive payment directly to your preferred method.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
   )
 }
