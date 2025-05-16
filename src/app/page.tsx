@@ -1,10 +1,8 @@
-
-
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 md:px-20">
-      {/* Hero Content */}
-      <section className="max-w-4xl text-center space-y-6">
+    <main className="min-h-screen flex flex-col items-center bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-6 md:px-20">
+      {/* Hero Section */}
+      <section className="max-w-4xl text-center space-y-6 py-20">
         <h1 className="text-5xl font-extrabold leading-tight">
           Unlock the Value of Your Unused Software Licenses
         </h1>
@@ -15,6 +13,7 @@ export default function Home() {
           Get a Quote
         </button>
       </section>
+
       {/* How It Works Section */}
       <section className="bg-white text-gray-800 py-20 w-full">
         <div className="max-w-6xl mx-auto px-6">
@@ -33,19 +32,22 @@ export default function Home() {
             <div className="text-center px-4">
               <div className="text-5xl mb-4">📊</div>
               <h3 className="text-xl font-semibold mb-2">Get Valuation</h3>
-              <p className="text-gray-600">We instantly evaluate your license's resale value.</p>
+              <p className="text-gray-600">
+                We instantly evaluate your license&apos;s resale value.
+              </p>
             </div>
 
             {/* Step 3 */}
             <div className="text-center px-4">
               <div className="text-5xl mb-4">💸</div>
               <h3 className="text-xl font-semibold mb-2">Get Paid</h3>
-              <p className="text-gray-600">Receive payment directly to your preferred method.</p>
+              <p className="text-gray-600">
+                Receive payment directly to your preferred method.
+              </p>
             </div>
           </div>
         </div>
       </section>
-
     </main>
-  )
+  );
 }
