@@ -471,6 +471,17 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {submitted && (
+        <motion.p
+          className="mt-6 text-green-600 font-semibold text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          Thank you for contacting us! We will get back to you shortly.
+        </motion.p>
+       )}
+
+
       {/* Footer */}
       <motion.footer
         className="bg-indigo-900 text-indigo-200 py-8 w-full mt-16"
