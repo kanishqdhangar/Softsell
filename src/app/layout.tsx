@@ -26,16 +26,16 @@ export const metadata = {
   ],
   authors: [{ name: "SoftSell Team" }],
   creator: "SoftSell",
-  metadataBase: new URL("https://softsell.vercel.app"), // update with your actual domain
+  metadataBase: new URL("https://softsell-alpha-amber.vercel.app/"), 
   openGraph: {
     title: "SoftSell – Sell Unused Software Licenses Instantly",
     description:
       "Get instant quotes and fast payouts for your unused software licenses. Try SoftSell now.",
-    url: "https://softsell.vercel.app",
+    url: "https://softsell-alpha-amber.vercel.app/",
     siteName: "SoftSell",
     images: [
       {
-        url: "/og-image.png", // make sure this image exists in your /public directory
+        url: "/og-image.png", 
         width: 1200,
         height: 630,
         alt: "SoftSell Hero Banner",
@@ -43,14 +43,6 @@ export const metadata = {
     ],
     locale: "en_US",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SoftSell – Sell Unused Software Licenses Instantly",
-    description:
-      "Instant quotes and fast payouts for your unused software licenses. Try SoftSell now.",
-    images: ["/og-image.png"],
-    creator: "@yourhandle", // optional, or remove if you don't use Twitter
   },
 };
 
@@ -63,7 +55,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://softsell.vercel.app" />
+        <link rel="canonical" href="https://softsell-alpha-amber.vercel.app/" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

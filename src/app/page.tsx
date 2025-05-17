@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+
 
 type FormData = {
   name: string;
@@ -17,7 +20,6 @@ type FormErrors = {
 };
 
 export default function Home() {
-  // your existing state and handlers here
   const [formData, setFormData] = useState<FormData>({
   name: "",
   email: "",
@@ -94,6 +96,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center bg-gradient-to-r from-indigo-700 via-blue-700 to-cyan-700 text-white px-6 md:px-20">
+      
       {/* Hero Section */}
       <motion.section
         className="max-w-5xl text-center space-y-8 py-24"
@@ -105,14 +108,14 @@ export default function Home() {
           className="text-6xl font-extrabold leading-tight drop-shadow-lg"
           variants={itemVariants}
         >
-          Unlock the Value of Your Unused Software Licenses
+          SoftSell
         </motion.h1>
+        
         <motion.p
           className="text-2xl max-w-3xl mx-auto opacity-90 leading-relaxed"
           variants={itemVariants}
         >
-          Sell your software licenses quickly and securely with SoftSell. Get
-          instant valuation and fast payouts.
+          Unlock the Value of Your Unused Software Licenses
         </motion.p>
         <motion.button
           className="mt-8 bg-white text-indigo-700 font-semibold px-12 py-4 rounded-full shadow-2xl hover:bg-gray-100 transition duration-300 ease-in-out drop-shadow-lg"
@@ -322,13 +325,14 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Contact / Lead Form Section */}
+      {/* Contact Form Section */}
       <motion.section
         className="bg-gradient-to-r from-indigo-50 to-cyan-50 py-24 w-full"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
+        id="contact"
       >
         <div className="max-w-3xl mx-auto px-8">
           <motion.h2
@@ -359,7 +363,7 @@ export default function Home() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`w-full px-5 py-3 border rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 ${
+                  className={`w-full px-5 py-3 text-black border rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 ${
                     errors.name
                       ? "border-red-500 focus:ring-red-400"
                       : "border-gray-300"
@@ -383,7 +387,7 @@ export default function Home() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-5 py-3 border rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 ${
+                  className={`w-full px-5 py-3 text-black border rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 ${
                     errors.email
                       ? "border-red-500 focus:ring-red-400"
                       : "border-gray-300"
@@ -407,7 +411,7 @@ export default function Home() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-5 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-300"
+                  className="w-full px-5 py-3 border text-black border-gray-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-300"
                 />
               </motion.div>
 
@@ -423,7 +427,7 @@ export default function Home() {
                   name="licenseType"
                   value={formData.licenseType}
                   onChange={handleChange}
-                  className={`w-full px-5 py-3 border rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 ${
+                  className={`w-full px-5 py-3 border text-black rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 ${
                     errors.licenseType
                       ? "border-red-500 focus:ring-red-400"
                       : "border-gray-300"
@@ -455,7 +459,7 @@ export default function Home() {
                 rows={5}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-5 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-300"
+                className="w-full px-5 py-3 border text-black border-gray-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-indigo-300"
               />
             </motion.div>
 
@@ -473,7 +477,7 @@ export default function Home() {
 
       {submitted && (
         <motion.p
-          className="mt-6 text-green-600 font-semibold text-center"
+          className="mt-10 text-green-100 py-4 font-semibold text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
@@ -499,7 +503,7 @@ export default function Home() {
             <a href="#" className="hover:text-white transition">
               About
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a href="#contact" className="hover:text-white transition">
               Contact
             </a>
             <a href="#" className="hover:text-white transition">
@@ -509,14 +513,19 @@ export default function Home() {
 
           {/* Right: Social Icons */}
           <div className="flex space-x-6 text-2xl">
-            <a href="#" aria-label="Twitter" className="hover:text-white transition">
-              🐦
+            <a
+              href="https://www.linkedin.com/in/kanishq-dhangar/"
+              aria-label="LinkedIn"
+              className="hover:text-white transition"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="#" aria-label="LinkedIn" className="hover:text-white transition">
-              🔗
-            </a>
-            <a href="#" aria-label="GitHub" className="hover:text-white transition">
-              🐙
+            <a
+              href="https://github.com/kanishqdhangar/softsell"
+              aria-label="GitHub"
+              className="hover:text-white transition"
+            >
+              <FontAwesomeIcon icon={faGithub} />
             </a>
           </div>
         </div>
@@ -525,6 +534,7 @@ export default function Home() {
           &copy; {new Date().getFullYear()} SoftSell. All rights reserved.
         </div>
       </motion.footer>
+
     </main>
   );
 }
