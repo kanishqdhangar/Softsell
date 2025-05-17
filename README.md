@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SoftSell - Sell Unused Software Licenses
 
-## Getting Started
+[Live Site 🚀](https://softsell-alpha-amber.vercel.app/)
 
-First, run the development server:
+SoftSell is a responsive, animated web application built with **Next.js 14 (App Router)** and **Tailwind CSS** that allows users to submit their unused software licenses for evaluation and payout.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Features Implemented
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- ✅ Responsive landing page layout using **Tailwind CSS**
+- ✅ Smooth entrance animations with **Framer Motion**
+- ✅ Fully functional and validated **contact form**
+- ✅ Custom **thank-you message** shown after successful form submission
+- ✅ SEO-optimized metadata with custom **favicon** and **Open Graph** image
+- ✅ Clean, component-based structure using App Router (`app/page.tsx`)
+- ✅ Deployed using **Vercel** for optimal performance
+- ✅ Git-based version control with commits reflecting development steps
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎨 Design Choices
 
-To learn more about Next.js, take a look at the following resources:
+- **Color Palette**:  
+  Indigo → Blue → Cyan gradient to give a modern, tech-savvy look.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Animations**:  
+  Entrance and hover animations are subtle, handled via `framer-motion`, to enhance user engagement without distraction.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Form Experience**:  
+  Inline validation provides real-time feedback without disrupting user flow. After successful submission, a clean confirmation message is shown.
 
-## Deploy on Vercel
+- **OG Image**:  
+  Dynamically designed Open Graph image enhances link previews when shared on social platforms.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⏱️ Time Spent
+
+| Task                                | Duration |
+|-------------------------------------|----------|
+| Project Setup (Next.js + Tailwind)  | 1 hour   |
+| Layout & Styling                    | 2.5 hours|
+| Animations & Transitions            | 1.5 hours|
+| Form Handling & Validation          | 2 hours  |
+| SEO Metadata + Favicon + OG Image   | 1 hour   |
+| Vercel Deployment & Fixes           | 1 hour   |
+| **Total**                           | **~9 hours** |
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js 14](https://nextjs.org/) (App Router)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Vercel Hosting](https://vercel.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 📂 Project Structure
+    /public
+        og-image.png #open graph preview image
+    /app
+        favicon.ico #custom favicon
+        globals.css #base styles
+        page.tsx #main page with form and layout
+        layout.tsx #for layout
+        
+
+---
+
+## ✅ Deployment
+
+Hosted via [Vercel](https://vercel.com/), deployed directly from GitHub on every push to `main`.
+
+---
+
+## 📃 License
+
+This project is part of an assignment and is not intended for commercial use.
+
+    
